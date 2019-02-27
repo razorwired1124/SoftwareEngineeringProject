@@ -1,0 +1,92 @@
+<link rel="stylesheet" type="text/css" href="Avatar.css">
+<button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('Stats', this, 'green')">Stats</button>
+<button class="tablink" onclick="openPage('Timeline', this, 'blue')">Timeline</button>
+<button class="tablink" onclick="openPage('Info', this, 'orange')">Info</button>
+
+<style>/* Set height of body and the document to 100% to enable "full page tabs" */
+    body, html {
+        height: 100%;
+        margin: 0;
+        font-family: Arial;
+      }
+      
+      /* Style tab links */
+      .tablink {
+        background-color: #555;
+        color: white;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        width: 25%;
+      }
+      
+      .tablink:hover {
+        background-color: #777;
+      }
+      
+      /* Style the tab content (and add height:100% for full page content) */
+      .tabcontent {
+        color: white;
+        display: none;
+        padding: 100px 20px;
+        height: 100%;
+      }
+      
+      #Home {background-color: red;}
+      #Stats {background-color: green;}
+      #Timeline {background-color: blue;}
+      #Info {background-color: orange;}
+</style>
+
+<div id="Home" class="tabcontent">
+  <h3>Home Page</h3>
+  <p>Home Page</p>
+</div>
+
+<div id="Stats" class="tabcontent">
+  <h3>Roll For Stats</h3>
+  <p>Intellegence....
+     Strength....
+     Patriotism.....
+     Loyalty.....
+  </p> 
+</div>
+
+<div id="Timeline" class="tabcontent">
+  <h3>Timeline</h3>
+  <p>Link to Timeline webpage and how to set one up</p>
+</div>
+
+<div id="Info" class="tabcontent">
+  <h3>More Info</h3>
+  <p>Everything Else</p>
+</div>
+<script>
+function openPage(pageName, elmnt, color) {
+        // Hide all elements with class="tabcontent" by default */
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+      
+        // Remove the background color of all tablinks/buttons
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].style.backgroundColor = "";
+        }
+      
+        // Show the specific tab content
+        document.getElementById(pageName).style.display = "block";
+      
+        // Add the specific color to the button used to open the tab content
+        elmnt.style.backgroundColor = color;
+      }
+      
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+</script>
