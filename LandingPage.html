@@ -33,6 +33,7 @@
       padding-top: 20px;
       background-color: #c9c2c2;
       height: 100%;
+      
     }
     
     /* Set black background color, white text and some padding */
@@ -50,6 +51,56 @@
       }
       .row.content {height:auto;} 
     }
+
+    #navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 50px;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+#stickybar{
+  width: 130px;
+  position: fixed;
+  z-index: 1;
+  top: 20px;
+  left: 10px;
+  background: #eee;
+  overflow-x: hidden;
+  padding: 8px 0;
+}
 
   </style>
 </head>
@@ -70,7 +121,12 @@
         <li class="active"><a href="LandingPage.html">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="Sources.html">Sources</a></li>
-        <li><a href="#">Avatar Stats</a></li>
+        <li><a href="AvatarStats.html">Avatar Stats</a></li>
+        <li><a href="#General">General Introduction</a></li>
+        <li><a href="#">Phase I</a></li>
+        <li><a href="#">Phase II</a></li>
+        <li><a href="#">Phase III</a></li>
+        <li><a href="#">Phase IV</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -81,22 +137,17 @@
   
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        
       <h1 class="display-4"><img src="NWwhite.png" alt="NWwhiteLogo" width="125" height="150"> Western Civ II Avatar Project</h1>
     </div>
   </div>
 
+
 <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-2 sidenav">
-      <p><a href="#">Phase I</a></p>
-      <p><a href="#">Phase II</a></p>
-      <p><a href="#">Phase III</a></p>
-      <p><a href="#">Phase IV</a></p>
-      <p><a href="#">Phase V</a></p>
-      <p><a href="#">All Phase Timeline</a></p>
+        <img src="Bastille.jpg" alt="Bastille" width="100%" height="50%">
     </div>
-    <div class="col-sm-8 text-left"> 
+    <div class="col-sm-8 text-left", id="General"> 
       <h1>General Introduction</h1>
       <h5 class="display-4">For this portion of your grade you will be randomly assigned the profile of a fictional person from on of the four periods we will cover in the course (Heretics and Kings, 1500-1700; Enlightenment and Revolution, 1700-1815; the long Nineteenth Century, 1815-1918; the Violent Twentieth Century, 1918-Present).
 
@@ -119,7 +170,23 @@
               </ul>
           </li>
       </ul>
-
+      <h1>Phase I: Identifying Possible Life Events Worksheet</h1>
+      <h4>Purpose and Description:</h4>
+      <ul>
+        <li>
+            <h5 class="display-4">The purpose of the “Identifying Possible Life Events” portion of the avatar project is to give you a general sense of the different historical events that shaped the period in which your character lived and which might have influenced their life and/or decisions.  This information is critical as it will enable you to make an informed decision about when to begin and end your character’s life, as well give you a number of different events about which you can look up primary and secondary sources.</h5>
+        </li>
+      </ul>
+      <h4>Tips:</h4>
+     <ul>
+       <li>
+          <h5 class="display-4">One way to begin this process is to read our textbook chapters that correspond to your character’s timeline.  For instance, if your character is alive in the 16th century (1500s), you could begin by looking through chapters 12, 13, and 14.  As you read, look for events that are mentioned as specifically happening in your country, as well as those that happened somewhere else, but might have also influenced your character’s life (keep in mind that you would need to be able to justify this effect with evidence from sources you find).  Some of the chapters in the textbook have more of a thematic rather than a strictly chronological organization.  Therefore you should also take a look at chapters that do not have a specific set of dates in their title.  For instance, Chapter 16, “The New Science of the Seventeenth Century,” also has information pertinent to the 1500s. </h5>
+       </li>
+       <li>
+         <h5 class="display-4">Another possibility is to go to the NWMSU’s library’s homepage and search “A history of ___________”.  This will bring up a large number of results that you can further refine.  If you are only interested in books that our library owns is to click on the “Books & Movies” tab.</h5>
+       </li>
+     </ul>
+     
     </div>
     <div class="col-sm-2 sidenav">
         <img src="enlightenment.jpg" alt="enlightenment and revolution" width="95%" height="95%">
@@ -127,11 +194,28 @@
   </div>
 </div>
 
+
 <footer class="container-fluid text-center">
   <p>Footer Text</p>
 </footer>
 
 
+
+
+<script>
+    window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky +50) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+    </script>
 
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Useful Sources</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -12,6 +12,10 @@
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 9;
     }
     
     /* Add a gray background color and some padding to the footer */
@@ -51,7 +55,7 @@
               <li><a href="LandingPage.html">Home</a></li>
               <li><a href="#">About</a></li>
               <li class="active"><a href="Sources.html">Sources</a></li>
-              <li><a href="#">Avatar Stats</a></li>
+              <li><a href="AvatarStats.html">Avatar Stats</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -62,7 +66,7 @@
 
   
 <div class="container">    
-  <h2 class="text-center">Avatar Project Possible Sources</h2><br>
+  <h2 class="text-center"; id="top">Avatar Project Possible Sources</h2><br>
   <h4 class="text-center">The following links are to various online collections of primary and secondary sources that will be of use to you in constructing your avata and their life story:</h4>
   <div class="row">
     <div class="col-sm-4">
@@ -208,6 +212,7 @@
 
 <footer class="container-fluid text-center">
   <p>Footer Text</p>
+  <a href="#top">Back to the top</a>
 </footer>
 
 </body>
