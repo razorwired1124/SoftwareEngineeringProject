@@ -8,63 +8,204 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 9;
-    }
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
     
-    /* Add a gray background color and some padding to the footer */
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
     }
-    
-  .carousel-inner img {
-      width: 100%; /* Set width to 100% */
-      margin: auto;
-      min-height:200px;
-  }
-
-  /* Hide the carousel text when the screen is less than 600 pixels wide */
-  @media (max-width: 600px) {
-    .carousel-caption {
-      display: none; 
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
     }
-  }
   </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>                        
-            </button>
-            <a class="navbar-brand" href="#"><img src="NWwhite.png" alt="NWwhiteLogo" width="25" height="30" ></a>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#"><img src="NWwhite.png" alt="NWwhiteLogo" width="25" height="30" ></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="LandingPage.html">Home</a></li>
+          <li><a href="Rules.html">Rules</a></li>
+          <li><a href="Sources.html">Sources</a></li>
+          <li class="active"><a href="AvatarStats.html">Avatar Stats</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-2 sidenav hidden-xs">
+      <h5>Attributes</h5>
+      <div class="well well-lg">Strength: </div>
+      <div class="well well-lg">Att. Tow. Auth.:</div>
+      <div class="well well-lg">Piety:</div>
+      <div class="well well-lg">Patriotism:</div>
+      <div class="well well-lg">Intell.:</div>
+      <div class="well well-lg">Loyalty:</div>
+        <br>
+    </div>
+    <br>
+    
+    <div class="col-sm-9">
+      <div class="well">
+        <h2>Western Civ II Avatar Project</h2>
+        <form class="form-horizontal" action="/action_page.php">
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="name">Student Name:</label>
+            <div class="col-sm-10">
+            <input type="name" class="form-control" id="StudnetName" placeholder="Your name">
+            </div>
           </div>
-          <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-              <li><a href="LandingPage.html">Home</a></li>
-              <li><a href="Rules.html">Rules</a></li>
-              <li><a href="Sources.html">Sources</a></li>
-              <li class="active"><a href="AvatarStats.html">Avatar Stats</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="Semster">Semester and Section #:</label>
+            <div class="col-sm-10">
+            <input type="name" class="form-control" id="SemesterSection" placeholder="Spring">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="CharacterName">Character Name:</label>
+            <div class="col-sm-10">
+            <input type="name" class="form-control" id="CharacterName" placeholder="Thomas Smith">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="TimePeriod">Time Period:</label>
+            <div class="col-sm-10">
+            <input type="name" class="form-control" id="TimePeriod">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="well">
+            <h4>Basic Information</h4>
+            <form class="form-horizontal" action="/action_page.php">
+
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="name">Birthdate:</label>
+                <div class="col-sm-10">
+                <input type="name" class="form-control" id="StudnetName" placeholder="Your name">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="Semster">Birthplace:</label>
+                <div class="col-sm-10">
+                <input type="name" class="form-control" id="SemesterSection" placeholder="Spring">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="CharacterName">Gender:</label>
+                <div class="col-sm-10">
+                <input type="name" class="form-control" id="CharacterName" placeholder="Thomas Smith">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="name">Occupation:</label>
+                <div class="col-sm-10">
+                <input type="name" class="form-control" id="StudnetName" placeholder="Your name">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="Semster">Religious Views:</label>
+                <div class="col-sm-10">
+                <input type="name" class="form-control" id="SemesterSection" placeholder="Spring">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="CharacterName">Familial Situation:</label>
+                <div class="col-sm-10">
+                <input type="name" class="form-control" id="CharacterName" placeholder="Thomas Smith">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="name">Death Date:</label>
+                <div class="col-sm-10">
+                <input type="name" class="form-control" id="StudnetName" placeholder="Your name">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="Semster">Death Place:</label>
+                <div class="col-sm-10">
+                <input type="name" class="form-control" id="SemesterSection" placeholder="Spring">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="CharacterName">Cause of Death:</label>
+                <div class="col-sm-10">
+                <input type="name" class="form-control" id="CharacterName" placeholder="Thomas Smith">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="CharacterName">Epitaph:</label>
+                <div class="col-sm-10">
+                <input type="name" class="form-control" id="CharacterName" placeholder="Thomas Smith">
+                </div>
+              </div>
               
-            </ul>
+            </form>
           </div>
         </div>
-      </nav>
 
+        <div class="col-sm-6">
+          <div class="well">
+          <form>
+            <div class="form-group">
+              <label for="comment">Background:</label>
+              <textarea class="form-control" rows="5" id="comment"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="comment">Historical Event #1:</label>
+              <textarea class="form-control" rows="5" id="comment"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="comment">Historical Event #2:</label>
+              <textarea class="form-control" rows="5" id="comment"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="comment">Avatar's Fate:</label>
+              <textarea class="form-control" rows="5" id="comment"></textarea>
+            </div>
+
+          </form>
+        </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
+
   
