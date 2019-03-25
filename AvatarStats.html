@@ -51,15 +51,34 @@
 
 <div class="container-fluid">
   <div class="row content">
-    <div class="col-sm-2 sidenav hidden-xs">
+    <div class="col-sm-2 well">
       <h5>Attributes</h5>
-      <div class="well well-lg">Strength: </div>
-      <div class="well well-lg">Att. Tow. Auth.:</div>
-      <div class="well well-lg">Piety:</div>
-      <div class="well well-lg">Patriotism:</div>
-      <div class="well well-lg">Intell.:</div>
-      <div class="well well-lg">Loyalty:</div>
-        <br>
+
+      <div class="well well-lg">Strength: 
+        <p id="num"></p>
+      </div>
+
+      <div class="well well-lg">Att. Tow. Auth.:
+        <p id="num1"></p>
+      </div>
+
+      <div class="well well-lg">Piety:
+        <p id="num2"></p>
+      </div>
+
+      <div class="well well-lg">Patriotism:
+        <p id="num3"></p>
+      </div>
+
+      <div class="well well-lg">Intell.:
+        <p id="num4"></p>
+      </div>
+
+      <div class="well well-lg">Loyalty:
+        <p id="num5"></p>
+      </div>
+
+      <button onclick="myFunction()" type="button" class="btn">Basic</button>
     </div>
     <br>
     
@@ -204,6 +223,30 @@
     </div>
   </div>
 </div>
+
+<script>
+    function myFunction() {
+      var x = Math.floor((Math.random() * 10) + 1);
+      document.getElementById("num").innerHTML = x;
+
+      var x = Math.floor((Math.random() * 10) + 1);
+      document.getElementById("num1").innerHTML = x;
+
+      var x = Math.floor((Math.random() * 10) + 1);
+      document.getElementById("num2").innerHTML = x;
+
+      var x = Math.floor((Math.random() * 10) + 1);
+      document.getElementById("num3").innerHTML = x;
+
+      var x = Math.floor((Math.random() * 10) + 1);
+      document.getElementById("num4").innerHTML = x;
+
+      var x = Math.floor((Math.random() * 10) + 1);
+      document.getElementById("num5").innerHTML = x;
+    }
+
+    </script>
+
 
 </body>
 </html>
