@@ -90,6 +90,17 @@
 .sticky + .content {
   padding-top: 60px;
 }
+
+#stickybar{
+  width: 130px;
+  position: fixed;
+  z-index: 1;
+  top: 20px;
+  left: 10px;
+  background: #eee;
+  overflow-x: hidden;
+  padding: 8px 0;
+}
   </style>
 </head>
 <body>
@@ -252,7 +263,20 @@
     </div>
   </div>
 
-
+  <script>
+    window.onscroll = function() {myFunction()};
+    
+    var IWC = document.getElementById("IWC");
+    var sticky = IWC.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky +50) {
+        IWC.classList.add("sticky")
+      } else {
+        IWC.classList.remove("sticky");
+      }
+    }
+    </script>
 
 
 
