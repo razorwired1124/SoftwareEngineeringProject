@@ -32,7 +32,8 @@
     .sidenav {
       padding-top: 20px;
       height: 100%;
-      
+      position: -webkit-sticky;
+      position: sticky;
     }
     
     footer {
@@ -120,9 +121,11 @@
         <li><a href="Sources.html">Sources</a></li>
         <li><a href="AvatarStats.html">Avatar Stats</a></li>
         <li><a href="Timeline.html">Timeline</a></li>
+      </ul>
     </div>
   </div>
 </nav>
+
 <br> <br>
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
@@ -139,7 +142,7 @@
       <div class="col-sm-8 text-left", id="General"> 
           <ul>
               <li>
-                <h2>Creating Your Character:</h2>
+                <h2 id="top">Creating Your Character:</h2>
                   <ol>
                     <li>
                       The character you create must utilize the parameters of the avatar outlined on the slip of paper that you randomly drew during the first week of class.
@@ -218,7 +221,7 @@
                   </ol>
               </li>
               <li>
-                <h2>Creating Your Life:</h2>
+                <h2 id="#Life">Creating Your Life:</h2>
                 <ol>
                   <li>Your character’s background and subsequent life actions must be consistent with the parameters of the avatar provided at the beginning of the assignment.  This includes developing the character according to the basic features that were on the slip of paper that you randomly drew AND the different ability scores that you rolled in your first meeting with Dr. Scofield.</li>
                   <li>Your character must interact with one historical event over the course of their lifetime.  See the assignment description for more details.</li>
@@ -275,7 +278,17 @@
 </body>
 
 <footer class="container-fluid text-center">
-  <p>Footer Text</p>
+    <address>
+      <h4>
+        <p>If you have any questions about the project, please contact <a href="mailto:DEVLINS@nwmissouri.edu">Dr. Scofield</a>
+          <br>
+        Or 
+        <br>
+        Visit his office: 54 Valk <br>
+        <a href="#top">Back to the top</a>
+        </address>
+ </p>
+</h4>
 </footer>
 
 </html>
