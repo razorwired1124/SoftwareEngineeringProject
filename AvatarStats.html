@@ -5,8 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
@@ -103,6 +105,17 @@
   overflow-x: hidden;
   padding: 8px 0;
 }
+.btn {
+  background-color: #006747;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #4CAF50;
+}
 
   </style>
 </head>
@@ -168,10 +181,10 @@
       <div class="well well-lg">Loyalty:
         <p id="num5"></p>
       </div>
-
-      <button onclick="myFunction()" type="button" class="btn">Basic</button>
+      <button onclick="myFunction()" type="button" class="btn">Click to Roll your Fate</button>
     </div>
     <br>
+    
     
     <div class="col-sm-9">
       <div class="well">
@@ -293,13 +306,9 @@
 
             <div class="form-group">
               <label for="comment">Historical Event #1:</label>
-              <textarea class="form-control" rows="5" id="comment"></textarea>
+              <textarea class="form-control" rows="10" id="comment"></textarea>
             </div>
 
-            <div class="form-group">
-              <label for="comment">Historical Event #2:</label>
-              <textarea class="form-control" rows="5" id="comment"></textarea>
-            </div>
 
             <div class="form-group">
               <label for="comment">Avatar's Fate:</label>
